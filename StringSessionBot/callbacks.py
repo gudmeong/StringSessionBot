@@ -4,6 +4,7 @@ from Data import Data
 from pyrogram import Client
 from pyrogram.types import CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
 from StringSessionBot.generate import generate_session
+from StringSessionBot.stats import bot_sys_stats
 
 
 # Callbacks
@@ -62,9 +63,10 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             print(traceback.format_exc())
             print(e)
             await callback_query.message.reply(ERROR_MESSAGE.format(str(e)))
+    elif query == "botStatus":
+        text = await bot_sys_stats()
+        await callback_query.answer(text, show_alert=True)
 
 
 ERROR_MESSAGE = "Oops! An exception occurred! \n\n**Error** : {} " \
-            "\n\nPlease visit @StarkBotsChat if this message doesn't contain any " \
-            "sensitive information and you if want to report this as " \
             "this error message is not being logged by us!"

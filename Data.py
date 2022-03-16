@@ -1,47 +1,43 @@
+from Config import BOT_USERNAME
 from pyrogram.types import InlineKeyboardButton
-
 
 class Data:
     # Start Message
     START = """
 Hey {}
 
-Welcome to {}
+I am {}
 
-If you don't trust this bot, 
-1) stop reading this message
-2) delete this chat
+Calm Down, i am isn't suscipious.
+1. Not logging your api, session, even your phone number
+2. Base on me is open source code😊, you can full read a message!
 
-Still reading?
 You can use me to generate pyrogram and telethon string session. Use below buttons to learn more !
-
-By @StarkBots
     """
-
     # Home Button
     home_buttons = [
-        [InlineKeyboardButton("🔥 Start Generating Session 🔥", callback_data="generate")],
-        [InlineKeyboardButton(text="🏠 Return Home 🏠", callback_data="home")]
+        [InlineKeyboardButton("Start Generating Session", callback_data="generate")],
+        [InlineKeyboardButton(text="Return Home", callback_data="home")]
     ]
 
     generate_button = [
-        [InlineKeyboardButton("🔥 Start Generating Session 🔥", callback_data="generate")]
+        [InlineKeyboardButton("Start Generating Session", callback_data="generate")]
     ]
 
     # Rest Buttons
     buttons = [
-        [InlineKeyboardButton("🔥 Start Generating Session 🔥", callback_data="generate")],
-        [InlineKeyboardButton("✨ Bot Status and More Bots ✨", url="https://t.me/StarkBots/7")],
+        [InlineKeyboardButton("Start Generating Session", callback_data="generate")],
+        [InlineKeyboardButton("Bot Status", callback_data="botStatus")],
         [
             InlineKeyboardButton("How to Use ❔", callback_data="help"),
-            InlineKeyboardButton("🎪 About 🎪", callback_data="about")
+            InlineKeyboardButton("About", callback_data="about")
         ],
-        [InlineKeyboardButton("♥ More Amazing bots ♥", url="https://t.me/StarkBots")],
+        [InlineKeyboardButton("Share me with copy url", url=f"http://t.me/{BOT_USERNAME}")],
     ]
 
     # Help Message
     HELP = """
-✨ **Available Commands** ✨
+ **Available Commands** 
 
 /about - About The Bot
 /help - This Message
@@ -54,14 +50,18 @@ By @StarkBots
     # About Message
     ABOUT = """
 **About This Bot** 
+__Remember this is forked version code!__
 
-A telegram bot to generate pyrogram and telethon string session by @StarkBots
+A telegram bot to generate pyrogram and telethon string session by [@gudmeong](https://github.com/gudmeong/StringSessionBot)
 
 Source Code : [Click Here](https://github.com/StarkBotsIndustries/StringSessionBot)
 
+Forked Code : [Click me mate!](https://github.com/gudmeong/StringSessionBot)
+
 Framework : [Pyrogram](docs.pyrogram.org)
 
-Language : [Python](www.python.org)
+Language : [Python](python.org)
 
+This Bot Maintained By : [@gudmeong](https://github.com/gudmeong)
 Developer : @StarkProgrammer
     """
