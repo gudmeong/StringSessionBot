@@ -1,18 +1,28 @@
-import time
-from psutil import disk_usage as d_usg, cpu_percent as cpu_per, virtual_memory as vm
+from time import time
+from generator import bot_start_time
 
+def get_readable_time(seconds: int) -> str:
+    result = ""
+    (days, remainder) = divmod(seconds, 86400)
+    days = int(days)
+    if days != 0:
+        result += f"{days}d "
+    (hours, remainder) = divmod(remainder, 3600)
+    hours = int(hours)
+    if hours != 0:
+        result += f"{hours}h "
+    (minutes, seconds) = divmod(remainder, 60)
+    minutes = int(minutes)
+    if minutes != 0:
+        result += f"{minutes}m "
+    seconds = int(seconds)
+    result += f"{seconds}s"
+    return result
 
 async def bot_sys_stats():
-    botStartTime = time.time()
-    usage_disk = d_usg()
-    usage_cpu = cpu_per()
-    vir_mem = vm()
-    uptime = int(time.time() - botStartTime)
+    uptime = get_readable_time(time() - bot_start_time)
     uptime_stats = f"""
-Bot alive✅
+Bot alive!
 UPTIME: {uptime}
-CPU: {usage_cpu}%
-RAM: {vir_mem}%
-DISK: {usage_disk}%
 """
     return uptime_stats

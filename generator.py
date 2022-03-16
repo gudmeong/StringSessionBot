@@ -1,3 +1,4 @@
+from time import time
 import Config
 import logging
 from pyromod import listen
@@ -10,6 +11,7 @@ logging.basicConfig(
 )
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
+bot_start_time = time()
 
 app = Client(
     ":memory:",

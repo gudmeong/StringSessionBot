@@ -27,12 +27,11 @@ You can use me to generate pyrogram and telethon string session. Use below butto
     # Rest Buttons
     buttons = [
         [InlineKeyboardButton("Start Generating Session", callback_data="generate")],
-        [InlineKeyboardButton("Bot Status", callback_data="botStatus")],
+        [InlineKeyboardButton("Bot Stats", callback_data="stats_callback")],
         [
             InlineKeyboardButton("How to Use ❔", callback_data="help"),
             InlineKeyboardButton("About", callback_data="about")
         ],
-        [InlineKeyboardButton("Share me with copy url", url=f"http://t.me/{BOT_USERNAME}")],
     ]
 
     # Help Message

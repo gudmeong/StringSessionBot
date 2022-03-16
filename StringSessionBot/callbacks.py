@@ -63,9 +63,9 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             print(traceback.format_exc())
             print(e)
             await callback_query.message.reply(ERROR_MESSAGE.format(str(e)))
-    elif query == "botStatus":
+    elif query == "stats_callback":
         text = await bot_sys_stats()
-        await callback_query.answer(text, show_alert=True)
+        return await callback_query.answer(text, show_alert=True)
 
 
 ERROR_MESSAGE = "Oops! An exception occurred! \n\n**Error** : {} " \
