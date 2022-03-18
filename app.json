@@ -52,6 +52,11 @@
       "required": true,
       "value": ""
     },
+    "BOT_USERNAME": {
+      "description": "Your bot username",
+      "required": true,
+      "value": ""
+    },
     "MUST_JOIN": {
       "description": "Add username/id of a channel/group",
       "required": false,

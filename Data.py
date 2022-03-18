@@ -17,7 +17,7 @@ You can use me to generate pyrogram and telethon string session. Use below butto
     # Home Button
     home_buttons = [
         [InlineKeyboardButton("Start Generating Session", callback_data="generate")],
-        [InlineKeyboardButton(text="Return Home", callback_data="home")]
+        [InlineKeyboardButton(text="Back", callback_data="home")]
     ]
 
     generate_button = [
