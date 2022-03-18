@@ -52,13 +52,12 @@ You can use me to generate pyrogram and telethon string session. Use below butto
 **About This Bot** 
 __Remember this is forked version code!__
 
-A telegram bot to generate pyrogram and telethon string session by [@gudmeong](https://github.com/gudmeong/StringSessionBot)
+A telegram bot to generate pyrogram and telethon string session by [@gudmeong](https://github.com)
 
 Source Code : [Click Here](https://github.com/StarkBotsIndustries/StringSessionBot)
-Forked Code : [Click me mate!](https://github.com/gudmeong/StringSessionBot)
 Framework : [Pyrogram](docs.pyrogram.org)
 Language : [Python](python.org)
 
-This Bot Maintained By : [@gudmeong](https://github.com/gudmeong)
+This Bot Maintained By : [@gudmeong](https://github.com)
 Developer : @StarkProgrammer
     """
