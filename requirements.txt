@@ -1,7 +1,7 @@
-git+https://github.com/pyrogram/pyrogram.git
+pyrogram==1.*
+Telethon==1.*
+TgCrypto
+SQLAlchemy
 psycopg2
 pyromod
 psutil
-SQLAlchemy
-Telethon
-TgCrypto
