@@ -1,4 +1,3 @@
-from Config import BOT_USERNAME
 from pyrogram.types import InlineKeyboardButton
 
 class Data:
